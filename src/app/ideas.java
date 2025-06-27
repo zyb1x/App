@@ -60,7 +60,6 @@ public class ideas extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(75, 28, 113));
 
-        jLabel1.setBackground(new java.awt.Color(255, 240, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 240, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/idea.png"))); // NOI18N
@@ -83,7 +82,7 @@ public class ideas extends javax.swing.JFrame {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(127, 76, 165));
+        jPanel2.setBackground(new java.awt.Color(49, 72, 122));
 
         jLabel2.setBackground(new java.awt.Color(255, 240, 255));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
@@ -290,9 +289,9 @@ public class ideas extends javax.swing.JFrame {
                 .addContainerGap(37, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(225, 210, 255));
+        jPanel3.setBackground(new java.awt.Color(173, 20, 87));
 
-        jButton1.setBackground(new java.awt.Color(75, 28, 113));
+        jButton1.setBackground(new java.awt.Color(197, 71, 22));
         jButton1.setForeground(new java.awt.Color(255, 240, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/plus-square.png"))); // NOI18N
         jButton1.setText("Nueva idea ");
