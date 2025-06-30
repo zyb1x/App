@@ -1,18 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package app;
 
-/**
- *
- * @author dluis
- */
+import javax.swing.JOptionPane;
+
+
 public class ideas extends javax.swing.JFrame {
 
-    /**
-     * Creates new form ideas
-     */
+  //Validar que no haya campos vacios al momento de guardar una nueva idea 
+    public boolean validar() {
+        if(nombre.getText().isEmpty() || correo.getText().isEmpty() || tituloIdea.getText().isEmpty() || descripcion.getText().isEmpty() ||
+           resolucion.getText().isEmpty() || beneficia.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Favor de llenar todos los campos");
+        }
+        return false;
+        
+    }  
+
     public ideas() {
         initComponents();
     }
@@ -39,17 +42,17 @@ public class ideas extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        nombre = new javax.swing.JTextField();
+        correo = new javax.swing.JTextField();
+        tituloIdea = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        descripcion = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        resolucion = new javax.swing.JTextArea();
+        nivelInnovacion = new javax.swing.JComboBox<>();
+        etapa = new javax.swing.JComboBox<>();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        beneficia = new javax.swing.JTextArea();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
         jButton2 = new javax.swing.JButton();
@@ -134,45 +137,45 @@ public class ideas extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(255, 240, 255));
         jLabel11.setText("¿En qué etapa se encuentra?");
 
-        jTextField1.setBackground(new java.awt.Color(255, 240, 255));
-        jTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        nombre.setBackground(new java.awt.Color(255, 240, 255));
+        nombre.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
+        nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                nombreActionPerformed(evt);
             }
         });
 
-        jTextField2.setBackground(new java.awt.Color(255, 240, 255));
-        jTextField2.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
+        correo.setBackground(new java.awt.Color(255, 240, 255));
+        correo.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
 
-        jTextField3.setBackground(new java.awt.Color(255, 240, 255));
-        jTextField3.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
+        tituloIdea.setBackground(new java.awt.Color(255, 240, 255));
+        tituloIdea.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
 
-        jTextArea1.setBackground(new java.awt.Color(255, 240, 255));
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
-        jScrollPane1.setViewportView(jTextArea1);
+        descripcion.setBackground(new java.awt.Color(255, 240, 255));
+        descripcion.setColumns(20);
+        descripcion.setRows(5);
+        descripcion.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
+        jScrollPane1.setViewportView(descripcion);
 
-        jTextArea2.setBackground(new java.awt.Color(255, 240, 255));
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jTextArea2.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
-        jScrollPane2.setViewportView(jTextArea2);
+        resolucion.setBackground(new java.awt.Color(255, 240, 255));
+        resolucion.setColumns(20);
+        resolucion.setRows(5);
+        resolucion.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
+        jScrollPane2.setViewportView(resolucion);
 
-        jComboBox1.setBackground(new java.awt.Color(255, 240, 255));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Seleccionar>", "Nuevo producto o servicio", "Mejora de un proceso", "Innovación social", "Inovación tecnológica" }));
-        jComboBox1.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
+        nivelInnovacion.setBackground(new java.awt.Color(255, 240, 255));
+        nivelInnovacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Seleccionar>", "Nuevo producto o servicio", "Mejora de un proceso", "Innovación social", "Inovación tecnológica" }));
+        nivelInnovacion.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
 
-        jComboBox2.setBackground(new java.awt.Color(255, 240, 255));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Seleccionar>", "Idea inicial", "En desarrollo", "Ya implementada" }));
-        jComboBox2.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
+        etapa.setBackground(new java.awt.Color(255, 240, 255));
+        etapa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<Seleccionar>", "Idea inicial", "En desarrollo", "Ya implementada" }));
+        etapa.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
 
-        jTextArea3.setBackground(new java.awt.Color(255, 240, 255));
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jTextArea3.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
-        jScrollPane3.setViewportView(jTextArea3);
+        beneficia.setBackground(new java.awt.Color(255, 240, 255));
+        beneficia.setColumns(20);
+        beneficia.setRows(5);
+        beneficia.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
+        jScrollPane3.setViewportView(beneficia);
 
         jTextArea4.setBackground(new java.awt.Color(255, 240, 255));
         jTextArea4.setColumns(20);
@@ -214,24 +217,24 @@ public class ideas extends javax.swing.JFrame {
                             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel4))
                                 .addGap(83, 83, 83)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
-                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(correo, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(69, 69, 69)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel6)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(tituloIdea, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(nivelInnovacion, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(etapa, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap(81, Short.MAX_VALUE))))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -250,7 +253,7 @@ public class ideas extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -259,10 +262,10 @@ public class ideas extends javax.swing.JFrame {
                             .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tituloIdea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(nivelInnovacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(41, 41, 41)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -270,7 +273,7 @@ public class ideas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(etapa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -342,9 +345,9 @@ public class ideas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_nombreActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -390,10 +393,12 @@ public class ideas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea beneficia;
+    private javax.swing.JTextField correo;
+    private javax.swing.JTextArea descripcion;
+    private javax.swing.JComboBox<String> etapa;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -412,12 +417,10 @@ public class ideas extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JComboBox<String> nivelInnovacion;
+    private javax.swing.JTextField nombre;
+    private javax.swing.JTextArea resolucion;
+    private javax.swing.JTextField tituloIdea;
     // End of variables declaration//GEN-END:variables
 }
