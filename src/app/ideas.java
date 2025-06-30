@@ -7,14 +7,19 @@ import javax.swing.JOptionPane;
 public class ideas extends javax.swing.JFrame {
 
   //Validar que no haya campos vacios al momento de guardar una nueva idea 
-    public boolean validar() {
+    public void validar() {
         if(nombre.getText().isEmpty() || correo.getText().isEmpty() || tituloIdea.getText().isEmpty() || descripcion.getText().isEmpty() ||
            resolucion.getText().isEmpty() || beneficia.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Favor de llenar todos los campos");
-        }
-        return false;
-        
-    }   
+           return;
+        } else{
+            JOptionPane.showMessageDialog(null, "¡Gracias por compartir tu visión innovadora!");
+         }
+               
+    }  
+    
+  //     public static ArrayList<String> Lista = new ArrayList<>();
+    
 
     public ideas() {
         initComponents();
@@ -56,7 +61,7 @@ public class ideas extends javax.swing.JFrame {
         beneficia = new javax.swing.JTextArea();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
+        enviarIdea = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
 
@@ -190,15 +195,15 @@ public class ideas extends javax.swing.JFrame {
         jTextArea4.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(75, 28, 113), null));
         jScrollPane4.setViewportView(jTextArea4);
 
-        jButton2.setBackground(new java.awt.Color(197, 71, 22));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/send-alt.png"))); // NOI18N
-        jButton2.setText("Enviar idea ");
-        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 240, 255), new java.awt.Color(255, 240, 255), null, null));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        enviarIdea.setBackground(new java.awt.Color(197, 71, 22));
+        enviarIdea.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        enviarIdea.setForeground(new java.awt.Color(255, 255, 255));
+        enviarIdea.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/send-alt.png"))); // NOI18N
+        enviarIdea.setText("Enviar idea ");
+        enviarIdea.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(255, 240, 255), new java.awt.Color(255, 240, 255), null, null));
+        enviarIdea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                enviarIdeaActionPerformed(evt);
             }
         });
 
@@ -249,7 +254,7 @@ public class ideas extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(648, 648, 648)
-                .addComponent(jButton2)
+                .addComponent(enviarIdea)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -296,7 +301,7 @@ public class ideas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(jButton2)
+                .addComponent(enviarIdea)
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
@@ -362,9 +367,9 @@ public class ideas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void enviarIdeaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarIdeaActionPerformed
+      validar();
+    }//GEN-LAST:event_enviarIdeaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -405,9 +410,9 @@ public class ideas extends javax.swing.JFrame {
     private javax.swing.JTextArea beneficia;
     private javax.swing.JTextField correo;
     private javax.swing.JTextArea descripcion;
+    private javax.swing.JButton enviarIdea;
     private javax.swing.JComboBox<String> etapa;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
