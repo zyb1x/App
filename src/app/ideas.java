@@ -14,7 +14,7 @@ public class ideas extends javax.swing.JFrame {
         }
         return false;
         
-    }  
+    }   
 
     public ideas() {
         initComponents();
