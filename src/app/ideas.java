@@ -53,33 +53,7 @@ public class ideas extends javax.swing.JFrame {
          }
                
     } 
-    
-    public void guardar(){
-        /*ArrayList<Propuesta> Lista = new ArrayList<>();
-        
-        String Nombre = nombre.getText();
-        String Correo = correo.getText();
-        String Titulo = titulo.getText();
-        
-        String Descripcion = descripcion.getText();
-        String Resolucion = resolucion.getText();
-        String Beneficia = beneficia.getText();
-        String Comentarios = comentarios.getText();
-        
-        String NivelInnovacion = nivelInnovacion.getSelectedItem().toString();
-        String Etapa = etapa.getSelectedItem().toString();
-        
-        Propuesta propuesta = new Propuesta(Nombre, Correo, Titulo, Descripcion, Resolucion, Beneficia, Comentarios, NivelInnovacion, Etapa);
-        Lista.add(propuesta);
-        
-        System.out.println(Lista);*/
-         
-    }
-    
-   
-    
-       
-    
+     
 
     public ideas() {
         initComponents();
@@ -446,7 +420,6 @@ public class ideas extends javax.swing.JFrame {
 
     private void enviarIdeaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarIdeaActionPerformed
       validar();
-      /*guardar();*/
       
     }//GEN-LAST:event_enviarIdeaActionPerformed
 
