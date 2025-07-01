@@ -35,7 +35,7 @@ public class Propuesta {
 
     @Override
     public String toString() {
-        return "Propuesta:{" 
+        return "Propuesta:" 
                 + "\nNombre: " + nombre + 
                 "\nCorreo: " + correo + 
                 "\nTitulo: " + titulo + 
@@ -44,7 +44,7 @@ public class Propuesta {
                 "\nbeneficio: " + beneficio + 
                 "\nComentarios: " + comentarios + 
                 "\nNivelInnovacion: " + nivelInnovacion +
-                "\nEtapa=" + etapa + '}';
+                "\nEtapa: " + etapa;
     }
     
     
