@@ -16,29 +16,63 @@ public class ideas extends javax.swing.JFrame {
            return;
         } else{
             JOptionPane.showMessageDialog(this, "¡Gracias por compartir tu visión innovadora!");
+            
+            ArrayList<Propuesta> Lista = new ArrayList<>();
+       
+            String Nombre = nombre.getText();
+            String Correo = correo.getText();
+            String Titulo = titulo.getText();
+       
+            String Descripcion = descripcion.getText();
+            String Resolucion = resolucion.getText();
+            String Beneficia = beneficia.getText();
+            String Comentarios = comentarios.getText();
+       
+            String NivelInnovacion = nivelInnovacion.getSelectedItem().toString();
+            String Etapa = etapa.getSelectedItem().toString();
+       
+            Propuesta propuesta = new Propuesta(Nombre, Correo, Titulo, Descripcion, Resolucion, Beneficia, Comentarios, NivelInnovacion, Etapa);
+            Lista.add(propuesta);
+       
+            System.out.println(Lista);
+            
+            // Limpiar JTextFields
+            nombre.setText("");
+            titulo.setText("");
+            correo.setText("");
+        
+            // Limpiar JTextArea
+            descripcion.setText("");
+            resolucion.setText("");
+            beneficia.setText("");
+            comentarios.setText("");
+
+            // Reiniciar JComboBox al primer elemento
+            nivelInnovacion.setSelectedIndex(0);
+            etapa.setSelectedIndex(0);
          }
                
     } 
     
     public void guardar(){
-       ArrayList<Propuesta> Lista = new ArrayList<>();
-       
-       String Nombre = nombre.getText();
-       String Correo = correo.getText();
-       String Titulo = titulo.getText();
-       
-       String Descripcion = descripcion.getText();
-       String Resolucion = resolucion.getText();
-       String Beneficia = beneficia.getText();
-       String Comentarios = comentarios.getText();
-       
-       String NivelInnovacion = nivelInnovacion.getSelectedItem().toString();
-       String Etapa = etapa.getSelectedItem().toString();
-       
-       Propuesta propuesta = new Propuesta(Nombre, Correo, Titulo, Descripcion, Resolucion, Beneficia, Comentarios, NivelInnovacion, Etapa);
-       Lista.add(propuesta);
-       
-        System.out.println(Lista);
+        /*ArrayList<Propuesta> Lista = new ArrayList<>();
+        
+        String Nombre = nombre.getText();
+        String Correo = correo.getText();
+        String Titulo = titulo.getText();
+        
+        String Descripcion = descripcion.getText();
+        String Resolucion = resolucion.getText();
+        String Beneficia = beneficia.getText();
+        String Comentarios = comentarios.getText();
+        
+        String NivelInnovacion = nivelInnovacion.getSelectedItem().toString();
+        String Etapa = etapa.getSelectedItem().toString();
+        
+        Propuesta propuesta = new Propuesta(Nombre, Correo, Titulo, Descripcion, Resolucion, Beneficia, Comentarios, NivelInnovacion, Etapa);
+        Lista.add(propuesta);
+        
+        System.out.println(Lista);*/
          
     }
     
@@ -299,11 +333,12 @@ public class ideas extends javax.swing.JFrame {
                                 .addComponent(jLabel9))
                             .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panelAzulLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nivelInnovacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(correo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(panelAzulLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(titulo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelAzulLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(nivelInnovacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(correo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(41, 41, 41)
                 .addGroup(panelAzulLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -393,12 +428,25 @@ public class ideas extends javax.swing.JFrame {
     }//GEN-LAST:event_nombreActionPerformed
 
     private void nuevaIdeaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevaIdeaActionPerformed
-        // TODO add your handling code here:
+        // Limpiar JTextFields
+        nombre.setText("");
+        titulo.setText("");
+        correo.setText("");
+        
+        // Limpiar JTextArea
+        descripcion.setText("");
+        resolucion.setText("");
+        beneficia.setText("");
+        comentarios.setText("");
+
+        // Reiniciar JComboBox al primer elemento
+        nivelInnovacion.setSelectedIndex(0);
+        etapa.setSelectedIndex(0);
     }//GEN-LAST:event_nuevaIdeaActionPerformed
 
     private void enviarIdeaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarIdeaActionPerformed
       validar();
-      guardar();
+      /*guardar();*/
       
     }//GEN-LAST:event_enviarIdeaActionPerformed
 
